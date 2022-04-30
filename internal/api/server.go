@@ -12,6 +12,8 @@ import (
 func Run(ctx context.Context) {
 	router := gin.Default()
 
+	router.GET("/health-check", healthCheck)
+
 	shakemonController := controllers.NewShakemonController(services.NewTranslationService(http.Client{}))
 	shakemonRouter := router.Group("/pokemon")
 	{
@@ -19,4 +21,10 @@ func Run(ctx context.Context) {
 	}
 
 	router.Run(":8080")
+}
+
+func healthCheck(c *gin.Context) {
+	c.JSON(200, gin.H{
+		"message": "server is running",
+	})
 }
