@@ -1,9 +1,9 @@
-# Shakémon:
+# Shakémon API:
 ## *If Shakespeare wrote the Pokédex*
 
 ## Content
 
-1. [Motivation](#Motivation) 
+1. [Description](#Motivation) 
 2. [Requirements](#Requirements)
 3. [API](#API)
     - [Pokémon](#Pokémon)
@@ -14,7 +14,7 @@
 
 ![Tests](https://github.com/vix993/project-lifeline/actions/workflows/test.yml/badge.svg)  ![Health Check](https://github.com/vix993/project-lifeline/actions/workflows/health_check.yml/badge.svg)
 
-## Motivation
+## Description
 
 I was tasked with creating an API that would return a description of a pokemon in the style of William Shakespeare.
 
