@@ -2,10 +2,12 @@ package api
 
 import (
 	"context"
+	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"github.com/vix993/shakemon/internal/api/controllers"
+	"github.com/vix993/shakemon/internal/config"
 	"github.com/vix993/shakemon/internal/services"
 )
 
@@ -20,7 +22,13 @@ func Run(ctx context.Context) {
 		shakemonRouter.GET("/:name", shakemonController.Get)
 	}
 
-	router.Run(":8080")
+	port := config.Get().Port
+	if port == "" {
+		port = ":8080"
+	}
+
+	log.Printf("listening on port %s", port)
+	router.Run(port)
 }
 
 func healthCheck(c *gin.Context) {
