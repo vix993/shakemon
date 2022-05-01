@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  shakemon-front:
+    image: vicbirth/shakemon:0.0.1
+    build: .
+    ports:
+      - "3000:3000"
+    networks:
+      - shakemon
+  shakemon-back:
+    image: vicbirth/shakemon_api
+    build: .
+    ports:
+      - "8080:8080"
+    networks:
+      - shakemon
+
+networks:
+  shakemon:
+    name: shakemon
