@@ -8,7 +8,6 @@
 3. [API](#API)
     - [Pokémon](#Pokémon)
     - [HealthCheck](#HealthCheck)
-4. [Additional Notes](#API)
 
 ## Description
 
