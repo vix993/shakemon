@@ -3,6 +3,7 @@ module github.com/vix993/shakemon
 go 1.18
 
 require (
+	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-gonic/gin v1.7.7
 	github.com/mtslzr/pokeapi-go v1.4.0
 	github.com/spf13/viper v1.11.0

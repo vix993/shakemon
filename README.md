@@ -10,21 +10,19 @@
     - [HealthCheck](#HealthCheck)
 4. [Additional Notes](#API)
 
-## Status
-
-![Tests](https://github.com/vix993/project-lifeline/actions/workflows/test.yml/badge.svg)  ![Health Check](https://github.com/vix993/project-lifeline/actions/workflows/health_check.yml/badge.svg)
-
 ## Description
 
 I was tasked with creating an API that would return a description of a pokemon in the style of William Shakespeare.
 
-What came out was [`ShakemonAPI`](https://shakemon-zu2jrydmba-lm.a.run.app).
+What came out was [`Shakemon`](www.example.com).
 
 This application currently provides two resources, the `/health-check` endpoint - that informs whether the server is running, and the `/pokemon/{name}` endpoint - that executes the search and translation of a given pokemon.
 
+The repository containing the front end of this app can be acessed here: https://github.com/vix993/shakemon-front
+
 You can run it with the following commands: 
-- `docker build . -t shakemon`
-- `docker run -p 8080:8080 -d shakemon`
+- `docker build . -t shakemon_api`
+- `docker run -p 8080:8080 -d shakemon_api`
 
 Without docker:
 - [`install golang`](https://go.dev/doc/install)
