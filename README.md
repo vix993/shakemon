@@ -23,6 +23,7 @@ The repository containing the front end of this app can be acessed here: https:/
 You can run it with the following commands: 
 - `docker build . -t shakemon_api`
 - `docker run -p 8080:8080 -d shakemon_api`
+
 For Cross Origin Sharing in local environment:
 - `docker build -f Dockerfile.nginx -t cors .`
 - `docker run cors`
