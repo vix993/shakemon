@@ -1,6 +1,7 @@
 package services
 
 import (
+	"errors"
 	"fmt"
 	"math/rand"
 	"time"
@@ -13,6 +14,9 @@ import (
 func (p *TranslationService) GetPokemon(name string) (res *entities.Pokemon, err error) {
 	response, err := pokeApiGo.Pokemon(name)
 	if err != nil {
+		if err.Error() == "invalid character 'N' looking for beginning of value" {
+			err = errors.New("invalid pokemon name")
+		}
 		return
 	}
 

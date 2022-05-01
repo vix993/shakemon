@@ -17,9 +17,9 @@ func Run(ctx context.Context) {
 
 	router.GET("/health-check", healthCheck)
 
-	serverConfig := cors.DefaultConfig()
+	serverConfig := cors.Default()
 
-	router.Use(cors.New(serverConfig))
+	router.Use(serverConfig)
 
 	shakemonController := controllers.NewShakemonController(services.NewTranslationService(http.Client{}))
 	shakemonRouter := router.Group("/pokemon")

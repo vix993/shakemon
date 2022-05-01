@@ -5,7 +5,7 @@ import (
 	"github.com/vix993/shakemon/internal/api/models"
 )
 
-func (p *TranslationService) DoTranslate(name string) (res *entities.Pokemon, err error) {
+func (p *TranslationService) DoGetPokemonThenTranslate(name string) (res *entities.Pokemon, err error) {
 	res, err = p.GetPokemon(name)
 	if err != nil {
 		return

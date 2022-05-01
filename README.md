@@ -14,7 +14,7 @@
 
 I was tasked with creating an API that would return a description of a pokemon in the style of William Shakespeare.
 
-What came out was [`Shakemon`](www.example.com).
+What came out was [`Shakemon`](https://shakemon.vercel.app/).
 
 This application currently provides two resources, the `/health-check` endpoint - that informs whether the server is running, and the `/pokemon/{name}` endpoint - that executes the search and translation of a given pokemon.
 
@@ -23,6 +23,9 @@ The repository containing the front end of this app can be acessed here: https:/
 You can run it with the following commands: 
 - `docker build . -t shakemon_api`
 - `docker run -p 8080:8080 -d shakemon_api`
+For Cross Origin Sharing in local environment:
+- `docker build -f Dockerfile.nginx -t cors .`
+- `docker run cors`
 
 Without docker:
 - [`install golang`](https://go.dev/doc/install)

@@ -8,7 +8,7 @@ import (
 )
 
 type ShakemonServiceClient interface {
-	DoTranslate(name string) (res *entities.Pokemon, err error)
+	DoGetPokemonThenTranslate(name string) (res *entities.Pokemon, err error)
 }
 
 type ShakemonController struct {
@@ -30,7 +30,7 @@ func (p *ShakemonController) Get(c *gin.Context) {
 		return
 	}
 
-	res, err := p.client.DoTranslate(name)
+	res, err := p.client.DoGetPokemonThenTranslate(name)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"message": err.Error(),
