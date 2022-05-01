@@ -17,7 +17,7 @@
 
 I was tasked with creating an application that would return a description of a pokemon in the style of William Shakespeare.
 
-The result of this prompt was [`Shakémon`](https://shakemon.vercel.app/). This repository contains the backend for this app.
+The result of this prompt was [`Shakémon`](https://shakemon.vercel.app/). This repository contains the backend for this app that has been deployed to GCP Cloud Run.
 
 This application currently provides two resources, the `/health-check` endpoint - that informs whether the server is running, and the `/pokemon/{name}` endpoint - that executes the search and translation of a given pokemon.
 
