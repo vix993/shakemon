@@ -9,6 +9,10 @@
     - [Pokémon](#Pokémon)
     - [HealthCheck](#HealthCheck)
 
+## Status
+
+![Tests](https://github.com/vix993/shakemon/actions/workflows/test.yml/badge.svg)
+
 ## Description
 
 I was tasked with creating an application that would return a description of a pokemon in the style of William Shakespeare.
