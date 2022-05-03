@@ -23,6 +23,10 @@ This application currently provides two resources, the `/health-check` endpoint 
 
 The repository containing the front end of this app can be acessed here: https://github.com/vix993/shakemon-front
 
+The unit tests are in internal/services/services_test.go and can be run like so:
+- `make test`
+- alternatively you can read the [ci logs](https://github.com/vix993/shakemon/actions) for the output.
+
 You can run the backend:
 - `git clone git@github.com:vix993/shakemon.git shakemon-api`
 - `cd shakemon-api`
