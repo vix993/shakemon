@@ -23,9 +23,15 @@ This application currently provides two resources, the `/health-check` endpoint 
 
 The repository containing the front end of this app can be acessed here: https://github.com/vix993/shakemon-front
 
-You can run the backend by itself too: 
+You can run the backend: 
 - `docker build . -t shakemon_api`
 - `docker run -p 8080:8080 -d shakemon_api`
+
+Then the frontend:
+- `git clone git@github.com:vix993/shakemon-front.git ../shakemon-front`
+- `cd ../shakemon-front`
+- `docker build -t shakemon .`
+- `docker run -p 3000:3000 shakemon`
 
 For Cross Origin Sharing in local environment:
 - `docker build -f Dockerfile.nginx -t cors .`
